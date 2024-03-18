@@ -1,0 +1,153 @@
+/* :where(.css-dev-only-do-not-override-1ae8k9u).ant-modal .ant-modal-content {
+    position: relative;
+    background-color: #ffffff;
+    background-clip: padding-box;
+    border-radius: 8px;
+    border: 1   ;
+    box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+    pointer-events: auto;
+    padding: 24px;
+    width: 480px;
+    gap: 24px;
+    height: 222px; */
+    /* top: 401px; */
+    /* left: 480px; */
+/* } */
+.end-campaign-modal .ant-modal-content{
+    position: relative;
+    background-color: #ffffff;
+    background-clip: padding-box;
+    border-radius: 8px;
+    border: 1   ;
+    box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+    pointer-events: auto;
+    padding: 24px;
+    width: 480px;
+    gap: 24px;
+    height: 222px;
+}
+
+.modal-block{
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+}
+
+.modal-head{
+    font-family: Raleway;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #000000;
+    margin-bottom:8px;
+
+}
+.modal-text{
+    font-family: Raleway;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #464646;
+    margin-bottom: 24px
+
+}
+
+.cancel-btn{
+    width: 101px;
+    height: 40px;
+    padding: 8px 24px 8px 24px;
+    gap: 10px;
+    border-radius: 8px ;  
+    background: #E6E6E6;
+    animation-timing-function: ease-out;
+    animation-duration: 300ms;
+    font-family: Raleway;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #222222;
+
+
+    
+
+}
+
+.end-btn{
+    width: 111px;
+    height: 40px;
+    padding: 8px 24px 8px 24px;
+    gap: 4px;
+    border-radius: 8px  ; 
+    background: #EB5757;
+    font-family: Raleway;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #FFFFFF;
+    
+
+}
+/* 
+:where(.css-dev-only-do-not-override-1ae8k9u).ant-btn-primary:not(:disabled):not(.ant-btn-disabled):hover {
+    /* Reset hover styles 
+    width: 111px;
+    height: 40px;
+    padding: 8px 24px 8px 24px;
+    gap: 4px;
+    border-radius: 8px  ; 
+    background: #EB5757;
+    font-family: Raleway;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #FFFFFF;
+    border-color: #E6E6E6;
+    
+/* } */ 
+/* 
+:where(.css-dev-only-do-not-override-1ae8k9u).ant-btn-default:not(:disabled):not(.ant-btn-disabled):hover {
+    width: 101px;
+    height: 40px;
+    padding: 8px 24px 8px 24px;
+    gap: 10px;
+    border-radius: 8px ;  
+    background: #E6E6E6;
+    animation-timing-function: ease-out;
+    animation-duration: 300ms;
+    font-family: Raleway;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #222222;
+    border-color: #E6E6E6;
+} */
+
+.end-campaign-modal .ant-btn-default:hover {
+    /* Override global hover styles */
+    width: 111px;
+    height: 40px;
+    padding: 8px 24px 8px 24px;
+    gap: 4px;
+    border-radius: 8px  ; 
+    background: #EB5757;
+    font-family: Raleway;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #FFFFFF;
+    border-color: #E6E6E6;
+}

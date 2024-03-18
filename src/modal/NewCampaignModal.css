@@ -1,0 +1,228 @@
+.new-campaign-modal .ant-modal-content {
+    position: relative;
+    background-color: #ffffff;
+    background-clip: padding-box;
+    border-radius: 8px;
+    border: 1;
+    box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+    pointer-events: auto;
+    padding: 32px;
+    width: 620px;
+    gap: 32px;
+    height: 636px;
+}
+
+.modal-body{
+    width: 556px;
+    height: 500px;
+    gap: 16px;
+
+}
+
+.modal-block{
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+}
+
+.modal-head{
+    font-family: Raleway;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #000000;
+    
+
+}
+modal-content{
+  
+    height: 452px;
+    gap: 24px
+
+}
+.cmpgn-name{
+
+    height: 76px;
+    gap: 4px;
+    margin-bottom: 24px;
+
+}
+.heads{
+    font-family: Raleway;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #464646;
+    margin-bottom: 8px;
+
+}
+.cmpgn-name-block{
+    height: 48px;
+    margin-bottom: 24px;
+
+}
+.cmpgn-name-input{
+    width: 100%;
+    height: 40px;
+    padding: 10px 12px 10px 12px;
+    gap: 8px;
+    border-radius: 8px;  
+    border: 1px;
+    background: #F8F8F8;
+    border: 1px solid #0000001F;
+    font-family: Raleway;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #464646;
+
+
+
+}
+.date-block{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.date-box{
+    width: 266px;
+    height:68px;
+
+
+}
+.date{
+    width: 266px;;
+    height: 40px;
+    padding: 10px 8px 10px 12px;
+    gap: 8px;
+    border-radius: 8px ;  
+    border: 1px ; 
+    background: #F8F8F8;
+    border: 1px solid #0000001F;    
+    font-family: Raleway;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #464646;
+
+
+
+}
+
+.paragraph-textarea{
+    width: 556px;
+    height: 90px;
+    padding: 12px; /* Remove the padding here */
+    gap: 8px;
+    border-radius: 8px;
+    border: 1px solid #27366D;
+    background: #F8F8F8;
+    box-shadow: 0px 4px 16px 0px #27366D3D;
+    font-family: Raleway;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+
+
+.modal-text{
+    font-family: Raleway;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #464646;
+    margin-bottom: 24px
+
+}
+
+.cancel-btn{
+    width: 101px;
+    height: 40px;
+    padding: 8px 24px 8px 24px;
+    gap: 10px;
+    border-radius: 8px ;  
+    background: #E6E6E6;
+    animation-timing-function: ease-out;
+    animation-duration: 300ms;
+    font-family: Raleway;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #222222;
+
+
+    
+
+}
+
+.end-btn{
+    width: 111px;
+    height: 40px;
+    padding: 8px 24px 8px 24px;
+    gap: 4px;
+    border-radius: 8px  ; 
+    background: #EB5757;
+    font-family: Raleway;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #FFFFFF;
+    
+
+}
+
+:where(.css-dev-only-do-not-override-1ae8k9u).ant-btn-primary:not(:disabled):not(.ant-btn-disabled):hover {
+    /* Reset hover styles */
+    width: 111px;
+    height: 40px;
+    padding: 8px 24px 8px 24px;
+    gap: 4px;
+    border-radius: 8px  ; 
+    background: #EB5757;
+    font-family: Raleway;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #FFFFFF;
+    border-color: #E6E6E6;
+    
+}
+
+:where(.css-dev-only-do-not-override-1ae8k9u).ant-btn-default:not(:disabled):not(.ant-btn-disabled):hover {
+    width: 101px;
+    height: 40px;
+    padding: 8px 24px 8px 24px;
+    gap: 10px;
+    border-radius: 8px ;  
+    background: #E6E6E6;
+    animation-timing-function: ease-out;
+    animation-duration: 300ms;
+    font-family: Raleway;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #222222;
+    border-color: #E6E6E6;
+}
