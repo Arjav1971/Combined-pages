@@ -25,7 +25,7 @@ const CustomDropdown = ({ submenu, buttonText }) => {
     };
   
     const menu = (
-      <Menu onClick={handleMenuClick} style={{ background: '#fff', borderRadius: '4px',}}>
+      <Menu className='cust-dropdown' onClick={handleMenuClick} style={{ background: '#F8F8F8', borderRadius: '8px',}}>
         
         {submenu}
       </Menu>
@@ -33,6 +33,7 @@ const CustomDropdown = ({ submenu, buttonText }) => {
   
     return (
       <Dropdown
+      
         overlay={menu}
         trigger={['click']}
         open={isDropdownOpen}

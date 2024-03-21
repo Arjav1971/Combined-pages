@@ -16,7 +16,10 @@ const ListBox = ({ id, status, heading, text, conversionRate, date, isSelected, 
       </div>
       <div className='box-details'>
         <div className='conversion'>
-          Conversion Rate: <span className='conversion-rate' style={{ color: conversionRate.color }}>{conversionRate.value} {conversionRate.icon && <img src={conversionRate.icon} alt="conversion icon" />}</span>
+          Conversion Rate:       
+          <span className='conversion-rate' style={{ color: conversionRate.color }}>
+            {conversionRate.value} {conversionRate.icon && <img src={conversionRate.icon} alt="conversion icon" />}
+          </span>
         </div>
         <div className='box-date'>
           {date}

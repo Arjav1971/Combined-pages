@@ -1,4 +1,4 @@
-.new-campaign-modal .ant-modal-content {
+/* .new-campaign-modal .ant-modal-content {
     position: relative;
     background-color: #ffffff;
     background-clip: padding-box;
@@ -122,7 +122,7 @@ modal-content{
     width: 556px;
     height: 90px;
     padding: 12px; /* Remove the padding here */
-    gap: 8px;
+    /* gap: 8px;
     border-radius: 8px;
     border: 1px solid #27366D;
     background: #F8F8F8;
@@ -190,7 +190,7 @@ modal-content{
 }
 
 :where(.css-dev-only-do-not-override-1ae8k9u).ant-btn-primary:not(:disabled):not(.ant-btn-disabled):hover {
-    /* Reset hover styles */
+    /* Reset hover styles *
     width: 111px;
     height: 40px;
     padding: 8px 24px 8px 24px;
@@ -225,4 +225,4 @@ modal-content{
     text-align: left;
     color: #222222;
     border-color: #E6E6E6;
-}
+} */ 

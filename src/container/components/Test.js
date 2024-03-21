@@ -53,7 +53,7 @@ const Test=()=>{
                     gap: '10px',
                    }}/>
                 </div>
-                <Menu mode="inline" defaultSelectedKeys={['dashboard']}
+                <Menu className="menu-1" mode="inline" defaultSelectedKeys={['dashboard']}
                 onClick={({key})=>{
                     if(key=="signout"){}
                     else{
@@ -64,8 +64,10 @@ const Test=()=>{
                     <Menu.Item key='campaigns' icon={<img src={logoCampaigns} alt="" className='symbols'/>}>Campaigns</Menu.Item>
                     <Menu.Item key='inventory' icon={<img src={logoInventory} alt="" className='symbols'/>}>Inventory</Menu.Item>
                     <Menu.Item key='appoinments' icon={<img src={logoAppoinments} alt="" className='symbols'/>}>Appoinments</Menu.Item>
-                    <Menu.Divider />
-                    <Menu.Item key='settings' icon={<img src={logoSetings} alt="" className='symbols'/>}>Org Settings</Menu.Item>
+                    <Menu.Divider className="menu-div" style={{ backgroundColor: 'black' }} />
+                
+                    <Menu.Item key='settings' icon={<img src={logoSetings} alt="" className='symbols'/>} >Org Settings</Menu.Item>
+
                     <Menu.Item key='notifications' icon={<img src={logoNotifications} alt="" className='symbols'/>}>Notifications</Menu.Item>
                     <Menu.Divider />
 
@@ -77,7 +79,7 @@ const Test=()=>{
                             <img src="https://randomuser.me/api/portraits/med/men/75.jpg" alt="User" className="user-photo-img" />
                         </div>
                         <div className="user-name">
-                          <p className='mb-0'>Mehul Agarwal</p>
+                          <p className='mb-0 ml-8px'>Mehul Agarwal</p>
                         </div>
                         <div className='dots'>
                           <BsThreeDotsVertical/>

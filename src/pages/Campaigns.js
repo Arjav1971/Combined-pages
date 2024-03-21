@@ -16,6 +16,7 @@ import { Layout, Menu, Button, theme, Dropdown } from 'antd';
 import campaignData from '../container/components/list-data/campaignData';
 import EndCampaignModal from '../modal/EndCampaignModal';
 import NewCampaignModal from '../modal/NewCampaignModal';
+import { useNavigate } from 'react-router-dom';
 
 const submenu1 = (
   <Menu>
@@ -67,13 +68,12 @@ const Campaigns = () => {
     const handleCloseModal = () => {
       setIsModalVisible(false);
     };
+    const navigate = useNavigate();
     const handleAddNewCampaign = () => {
-        setIsAddNewCampaignModalVisible(true);
+      navigate('/campaigns/new');
     };
 
-    const handleCloseAddNewCampaignModal = () => {
-        setIsAddNewCampaignModalVisible(false);
-    };
+    
 
   
   
@@ -95,7 +95,7 @@ const Campaigns = () => {
                 <p className='btn-text2'>New campaign</p>
                 
             </button>
-            <NewCampaignModal visible={isAddNewCampaignModalVisible} onClose={handleCloseAddNewCampaignModal} />
+  
 
 
             </div>

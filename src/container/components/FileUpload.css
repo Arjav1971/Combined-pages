@@ -1,0 +1,190 @@
+.file-up.ant-upload-wrapper .ant-upload-drag {
+    position: relative;
+    width: 100%;
+    height: 149px;
+    text-align: center;
+    /* background: rgba(0, 0, 0, 0.02); */
+    border: 1px dashed #d9d9d9;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: border-color 0.3s;
+    background: #27366D14;
+    border: 1px solid #27366D3D;
+    margin-bottom: 16px;
+
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center horizontally */
+    height: 100%; /* Make the icon container full height */
+}
+
+
+.upload-text{
+    /* width:218px;
+    height:34px; */
+
+    padding: 5px 0px 0px 0px;
+    gap: 10px;
+    opacity: 0px;
+
+    font-family: Raleway;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: center;
+   
+
+}
+.browse{
+    font-family: Raleway;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: center;
+    text-decoration: underline;
+    color: #27366D;
+
+}
+.supported-formats{
+  
+    padding: 5px 0px 0px 0px;
+    gap: 10px;
+    opacity: 0px;
+    font-family: Raleway;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: center;
+    color: #676767;
+
+
+}
+.drag-text{
+    font-family: Raleway;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: center;
+    display: flex;
+
+}
+.uploading-files{
+    font-family: Raleway;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16.44px;
+    
+    color: #676767;
+
+}
+
+.uploaded-files{
+    font-family: Raleway;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16.44px;
+    
+    color: #676767;
+    margin-bottom: 16px;
+
+}
+.heading{
+    margin-bottom: 8px;
+}
+/* .uploaded-files.ant-list-item {
+    width: 556px;
+    height: 40px;
+    top: 24px;
+    gap: 0px;
+    border-radius: 8px 0px 0px 0px;
+    border: 0.5px solid #E6E6E6;
+    background: #F8F8F8;
+
+    opacity: 0px;
+    font-family: Raleway;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: center;
+    color: #0F0F0F;
+
+} */
+
+.uploading-files .ant-list .ant-list-item {
+    /* Your CSS styles */
+  
+    height: 40px;
+    top: 24px;
+    gap: 0px;
+    border-radius: 8px;
+    border: 0.5px solid #E6E6E6;
+    background: #F8F8F8;
+    opacity: 0px;
+    margin-bottom: 8px;
+    padding: 10px 12px 10px 12px;
+    font-family: Raleway;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    /* text-align: center; */
+    color: #0F0F0F;
+
+
+}
+
+.uploading-files .ant-progress-bg {
+    background: #27366D;
+}
+
+/* .uploading-files .ant-list .ant-list-item .ant-progress {
+    width: calc(100% - 24px); 
+    background: #27366D;
+} */
+
+
+/* .uploading-files .ant-list .ant-list-item .ant-progress-inner {
+    width: 100%;
+    height: 3px;
+    border-radius: 10px;
+    background: #27366D;
+} */
+
+
+
+
+.uploaded-files .ant-list .ant-list-item {
+    /* Your CSS styles */
+  
+    height: 40px;
+    top: 24px;
+    gap: 0px;
+    border-radius: 8px;
+    border: 0.5px solid #E6E6E6;
+    background: #F8F8F8;
+    opacity: 0px;
+    margin-bottom: 8px;
+    padding: 10px 12px 10px 12px;
+    font-family: Raleway;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: center;
+    color: #0F0F0F;
+
+
+}
+
+.uploaded-files .ant-list .ant-list-item .action-button {
+    width: 16.67px;
+    height: 16.67px;
+    top: 1.67px;
+    left: 1.67px;
+    gap: 0px;
+    opacity: 0px;
+}
+
+
+/* background: #27366D; */
