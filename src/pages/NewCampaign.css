@@ -355,6 +355,7 @@
 /* Style the scrollbar */
 .new-cmpgn::-webkit-scrollbar {
     width: 10px; /* Width of the scrollbar */
+    height: 10px !important;
    
     
 }
@@ -362,6 +363,7 @@
 /* Track of the scrollbar */
 .new-cmpgn::-webkit-scrollbar-track {
     width: 6px;
+    height: 10px !important;
    
 height: 842px ;
 top: 146px;

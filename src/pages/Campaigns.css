@@ -5,7 +5,7 @@
 .submenu{
     display: flex;
     align-items: center;
-    width: 1,184px;
+    /* width: 1184px; */
     height: 72px;
     top: 56px;
     left: 256px;
@@ -372,28 +372,6 @@
     border: none; /* Remove border */
 }
   
-  /* .custom-pagination .ant-pagination-item-active a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 32px;
-    height: 32px;
-    padding: 10px ; 
-    gap: 10px;
-    border-radius: 8px ; 
-    background: #27366D;
-    border: 1px solid #27366D;
-    font-family: Raleway;
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 16px;
-    letter-spacing: 0em;
-    text-align: left;
-    color: #FFFFFF;
-
-
-  }
-  */
 
   
   .custom-pagination .ant-pagination-prev,

@@ -78,6 +78,13 @@
 
 }
 
+.cancel-btn:hover{
+    background-color: #D4D4D4 !important; 
+    color: #222222 !important; 
+    border-color: #D4D4D4 !important; 
+
+}
+
 .end-btn{
     width: 111px;
     height: 40px;
@@ -95,6 +102,27 @@
     
 
 }
+/* Add hover styles for the .end-btn */
+.end-btn:hover {
+    background-color: #ff6b6b !important; /* Change background color on hover */
+    color: #fff; /* Change text color on hover */
+    border-color: #ff6b6b; /* Change border color on hover */
+    width: 111px;
+    height: 40px;
+    padding: 8px 24px 8px 24px;
+    gap: 4px;
+    border-radius: 8px  ; 
+    background: #EB5757;
+    font-family: Raleway;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #FFFFFF;
+    border-color: #E6E6E6;
+}
+
 /* 
 :where(.css-dev-only-do-not-override-1ae8k9u).ant-btn-primary:not(:disabled):not(.ant-btn-disabled):hover {
     /* Reset hover styles 
@@ -133,9 +161,9 @@
     color: #222222;
     border-color: #E6E6E6;
 } */
-
+/* 
 .end-campaign-modal .ant-btn-default:hover {
-    /* Override global hover styles */
+   
     width: 111px;
     height: 40px;
     padding: 8px 24px 8px 24px;
@@ -150,4 +178,5 @@
     text-align: center;
     color: #FFFFFF;
     border-color: #E6E6E6;
-}
+} */
+

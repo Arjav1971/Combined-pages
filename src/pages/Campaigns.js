@@ -15,7 +15,7 @@ import ListBox from '../container/components/list-box';
 import { Layout, Menu, Button, theme, Dropdown } from 'antd';
 import campaignData from '../container/components/list-data/campaignData';
 import EndCampaignModal from '../modal/EndCampaignModal';
-import NewCampaignModal from '../modal/NewCampaignModal';
+
 import { useNavigate } from 'react-router-dom';
 
 const submenu1 = (
