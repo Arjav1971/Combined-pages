@@ -3,7 +3,7 @@ import {
     MenuFoldOutlined,
     MenuUnfoldOutlined,
   } from '@ant-design/icons';
-import { Outlet, useNavigate } from 'react-router-dom';
+import { Outlet, useNavigate,useLocation } from 'react-router-dom';
 
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { Layout, Menu, Button, theme, Dropdown, Divider } from 'antd';
@@ -37,9 +37,31 @@ const Test = () => {
       token: { colorBgContainer, borderRadiusLG },
     } = theme.useToken();
     const navigate = useNavigate();
+    const location = useLocation();
 
     const handleDropdownClick = () => {
         setIsDropdownOpen(!isDropdownOpen);
+    };
+    const getMenuText = () => {
+        switch (location.pathname) {
+            case '/dashboard':
+                return 'Dashboard';
+            case '/campaigns':
+                return 'Campaigns';
+            case '/campaigns/new':
+                return 'Campaigns / New Campaign';
+            case '/inventory':
+                return 'Inventory';
+            case '/appointments':
+                return 'Appointments';
+            case '/settings':
+                return 'Org Settings';
+            case '/notifications':
+                return 'Notifications';
+           
+            default:
+                return '';
+        }
     };
 
     const submenu1 = (
@@ -115,10 +137,11 @@ const Test = () => {
                     <Menu.Item key='campaigns' icon={<img src={logoCampaigns} alt="" className='symbols'/>}>Campaigns</Menu.Item>
                     <Menu.Item key='inventory' icon={<img src={logoInventory} alt="" className='symbols'/>}>Inventory</Menu.Item>
                     <Menu.Item key='appointments' icon={<img src={logoAppointments} alt="" className='symbols'/>}>Appointments</Menu.Item>
-                    <Menu.Divider className="menu-div" style={{ backgroundColor: 'black' }} />
+                    <Divider className="menu-div"  />
+                    
                     <Menu.Item key='settings' icon={<img src={logoSettings} alt="" className='symbols'/>} >Org Settings</Menu.Item>
                     <Menu.Item key='notifications' icon={<img src={logoNotifications} alt="" className='symbols'/>}>Notifications</Menu.Item>
-                    <Menu.Divider />
+                    
                 </Menu>
                 <div className="user-info-bottom">
                     {!collapsed ? (
@@ -148,7 +171,7 @@ const Test = () => {
                         <img src={logoRight} className="right" alt=""/>
                     </div>
                     <div className='heading mb-0'>
-                       Campaigns
+                       {getMenuText()}
                     </div>
                 </div>
                 <div className='leftbar'>
