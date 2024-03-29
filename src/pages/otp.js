@@ -1,10 +1,31 @@
+import React, { useState, useEffect } from "react";
 import logo from '../assets/logo.svg'
 import '../container/style/login.css'
 import {Carousel}  from '../container/components/carousel'
 import slides from "../data/carouselData.json";
+import { BsEyeSlash, BsEye } from "react-icons/bs";
+
 
 
 const Login = () => {
+
+    const [formData, setFormData] = useState({
+        number: '',
+        otp: ''
+    })
+    const [showPassword, setShowPassword] = useState(false);
+    const handleChange = (e) => {
+        e.preventDefault();
+        const { name, value } = e.target;
+        setFormData({
+            ...formData, [name]: value
+        })
+    }
+
+    const togglePasswordVisibility = () => {
+        setShowPassword(!showPassword);
+    };
+
     return (
 
         <div className="w-full h-screen flex flex-row-reverse items-start">
@@ -18,14 +39,21 @@ const Login = () => {
                     <div className='w-full flex flex-col mb-2 '>
                         <h3 className='login font-Raleway'>Login</h3>
                         <p className=' text-[20px] font-normal text-[#686767] mb-10 font-Raleway'>See your growth and get management support. </p>
-                    </div>
+                    </div> 
                     <div class="mb-6">
                         <label for="default-input" class="block mb-2 text-sm font-normal text-[18px] text-[#6c6c6c]">Mobile Number</label>
                         <input type="text" placeholder='Enter your mobile number... ' id="default-input" class="bg-[#f0f0f0] border border-gray-400 text-gray-900 text-l rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " />
                     </div>
                     <div class="mb-6">
                         <label for="default-input" class="block mb-2 text-sm font-normal text-[18px] text-[#6c6c6c]">OTP</label>
-                        <input type="password" placeholder='Enter your 6 digit OTP...' id="default-input" class="bg-[#f0f0f0] border border-gray-400 text-gray-900 text-l rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " />
+                        <div className="mb-4 flex">
+                               <input type={
+                                    showPassword ? "text" : "password"
+                                } onChange={handleChange} placeholder='Enter the 6 digit OTP...' id="default-input" class="bg-[#f0f0f0] border border-gray-400 text-gray-900 text-l rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " />
+                                <span  className="cursor-pointer flex justify-around items-center " onClick={togglePasswordVisibility}>
+                                    {showPassword ? < BsEye className="absolute mr-10" size={20} /> : <BsEyeSlash className="absolute mr-10" size={20} />}
+                                </span>
+                            </div>
                     </div>
                     <div className='w-full flex items-center justify-between'>
                         <div className='w-full flex items-center'>

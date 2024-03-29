@@ -1,0 +1,11 @@
+.applys_filter{
+    display: flex;
+    align-items: center;
+    width: Hug (157px);
+    height: Fixed (40px);
+    padding: 8px 12px 8px 12px;
+    border-radius: 8px;
+    gap: 4px;
+    background: #ffffff;
+    font-weight: 500;
+  }

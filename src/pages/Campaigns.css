@@ -127,8 +127,18 @@
     gap: 4px;
     background: #27366D;
     border: 1px solid #27366D;
-    
-
+  }
+  .apply_filter{
+    display: flex;
+    align-items: center;
+    width: Hug (157px);
+    height: Fixed (40px);
+    padding: 8px 12px 8px 12px;
+    border-radius: 8px;
+    gap: 4px;
+    background: #ffffff;
+    border: 1px solid #d4d4d4;
+    font-weight: 500;
   }
 
   .btn-text{
