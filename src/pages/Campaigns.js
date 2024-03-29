@@ -37,29 +37,29 @@ const submenu2 = (
 const campaigns = campaignData;
 
 const Campaigns = () => {
-  const [currentPage, setCurrentPage] = useState(1); // State for current page
-  const [pageSize] = useState(5); // Number of items per page
-
-  const handlePageChange = (page) => {
-    setCurrentPage(page);
-  };
-  const [selectedBox, setSelectedBox] = useState(null); // State to store the id of the selected box
-
-  const handleBoxClick = (boxId) => {
-    if (selectedBox === boxId) {
-      setSelectedBox(null);
-    } else {
-      setSelectedBox(boxId);
-    }
-    console.log("Selected Box:", selectedBox); // Add this line to check selectedBox state
-  };
-  // Calculate start and end index for current page
-  const startIndex = (currentPage - 1) * pageSize;
-  const endIndex = Math.min(startIndex + pageSize - 1, campaigns.length - 1);
-  // Get current page data
-  const currentPageData = campaigns.slice(startIndex, endIndex + 1);
-  const [isModalVisible, setIsModalVisible] = useState(false);
-  const [isAddNewCampaignModalVisible, setIsAddNewCampaignModalVisible] = useState(false);
+    const [currentPage, setCurrentPage] = useState(1); // State for current page
+    const [pageSize] = useState(5); // Number of items per page
+  
+    const handlePageChange = (page) => {
+      setCurrentPage(page);
+    };
+    const [selectedBox, setSelectedBox] = useState(null); // State to store the id of the selected box
+  
+    const handleBoxClick = (boxId) => {
+      if (selectedBox === boxId) {
+        setSelectedBox(null);
+      } else {
+        setSelectedBox(boxId);
+      }
+      console.log("Selected Box:", selectedBox); // Add this line to check selectedBox state
+    };
+    // Calculate start and end index for current page
+    const startIndex = (currentPage - 1) * pageSize;
+    const endIndex = Math.min(startIndex + pageSize - 1, campaigns.length - 1);
+    // Get current page data
+    const currentPageData = campaigns.slice(startIndex, endIndex + 1);
+    const [isModalVisible, setIsModalVisible] = useState(false);
+    const [isAddNewCampaignModalVisible, setIsAddNewCampaignModalVisible] = useState(false);
 
   const handleEndCampaign = () => {
     setIsModalVisible(true);
@@ -73,25 +73,27 @@ const Campaigns = () => {
     navigate('/campaigns/new');
   };
 
-
+    
 
 
 
   return (
     <div className='campgn'>
-      {/* <Content className="ant-layout"> */}
-      <div className='submenu'>
-        <div className="search-container">
-          <input type="text" className="form-control py-2" placeholder="Search by Campaign name" aria-label="Search by Campaign name" aria-describedby="basic-addon2" />
-          <img src={searchIcon} className="search-icon" alt="Search" />
-        </div>
-        <div className='right_options'>
-          <CustomDropdown className="custom-dropdown" submenu={submenu1} buttonText="Current month" />
-          <CustomDropdown className="custom-dropdown" submenu={submenu2} buttonText="All campaigns" />
-          <div>
-            <button className='new_campaign' onClick={handleAddNewCampaign}>
-              <img src={logoplus} alt="" />
-              <p className='btn-text2'>New campaign</p>
+            {/* <Content className="ant-layout"> */}
+        <div className='submenu'>
+          <div className="search-container">
+            <input type="text" className="form-control py-2" placeholder="Search by Campaign name" aria-label="Search by Campaign name" aria-describedby="basic-addon2"/>
+            <img src={searchIcon} className="search-icon" alt="Search" />
+          </div>
+          <div className='right_options'>
+
+            <CustomDropdown  className="custom-dropdown" submenu={submenu1} buttonText="Current month" />
+            <CustomDropdown  className="custom-dropdown" submenu={submenu2} buttonText="All campaigns" />
+            <div>
+            <button className='new_campaign'  onClick={handleAddNewCampaign}>
+                <img src={logoplus} alt=""/>
+                <p className='btn-text2'>New campaign</p>
+                
             </button>
           </div>
         </div>

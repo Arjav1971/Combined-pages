@@ -1,52 +1,43 @@
 import React, { useState } from 'react';
-import { Upload, message, Progress, List, Button } from 'antd';
-import { InboxOutlined, DeleteOutlined, CheckCircleOutlined } from '@ant-design/icons';
+import { Progress, List, Button } from 'antd';
+import { CheckCircleOutlined, DeleteOutlined } from '@ant-design/icons';
+import { useDropzone } from 'react-dropzone';
 import "./FileUpload.css";
 import logoDrag from "../../assets/Framedrag.svg";
-
-const { Dragger } = Upload;
 
 const FileUpload = () => {
     const [uploadingFiles, setUploadingFiles] = useState([]);
     const [uploadedFiles, setUploadedFiles] = useState([]);
     const [totalUploaded, setTotalUploaded] = useState(0);
 
-    const handleUpload = (info) => {
-        const { status, name } = info.file;
-        if (status === 'uploading') {
-            if (!uploadingFiles.includes(name)) {
-                setUploadingFiles(prevFiles => [...prevFiles, name]);
-            }
-        } else if (status === 'done') {
-            setUploadingFiles(prevFiles => prevFiles.filter(file => file !== name));
-            setUploadedFiles(prevFiles => [...prevFiles, name]);
-            setTotalUploaded(prevTotal => prevTotal + 1); // Increment totalUploaded only on successful upload
-            message.success(`${name} file uploaded successfully.`);
-        } else if (status === 'error') {
-            setUploadingFiles(prevFiles => prevFiles.filter(file => file !== name));
-            message.error(`${name} file upload failed.`);
-        }
+    const handleUpload = (acceptedFiles) => {
+        acceptedFiles.forEach(file => {
+            setUploadingFiles(prevFiles => [...prevFiles, file]);
+            // Simulate upload completion after 2 seconds
+            setTimeout(() => {
+                setUploadingFiles(prevFiles => prevFiles.filter(f => f !== file));
+                setUploadedFiles(prevFiles => [...prevFiles, file]);
+                setTotalUploaded(prevTotal => prevTotal + 1);
+            }, 2000);
+        });
     };
 
-    // const handleDelete = (fileName) => {
-    //     setUploadedFiles(prevFiles => prevFiles.filter(file => file !== fileName));
-    // };
     const handleDelete = (fileName) => {
-        setUploadedFiles(prevFiles => prevFiles.filter(file => file !== fileName));
-        setUploadingFiles(prevFiles => prevFiles.filter(file => file !== fileName)); // Remove the file from uploadingFiles too
-        setTotalUploaded(prevTotal => prevTotal - 1); // Decrement totalUploaded
+        setUploadedFiles(prevFiles => prevFiles.filter(file => file.name !== fileName));
+        setUploadingFiles(prevFiles => prevFiles.filter(file => file.name !== fileName));
+        setTotalUploaded(prevTotal => prevTotal - 1);
     };
-    
+
+    const { getRootProps, getInputProps } = useDropzone({
+        onDrop: handleUpload,
+        accept: '.csv, .xlsx', // Accepted file formats
+        maxSize: 1048576 // Maximum file size in bytes
+    });
+
     return (
         <div>
-            <Dragger
-                className='file-up'
-                name="file"
-                multiple={true}
-                action="https://run.mocky.io/v3/d5994d9c-c53c-4853-a357-b69eee59830f"
-                onChange={handleUpload}
-                showUploadList={false}
-            >
+            <div {...getRootProps()} className='file-up'>
+                <input {...getInputProps()} />
                 <div className='upload-block'>
                     <div className='icon'>
                         <img className="upload-img" src={logoDrag} alt=" " />
@@ -58,17 +49,16 @@ const FileUpload = () => {
                         Supported formats: .csv, .xlsx
                     </div>
                 </div>
-            </Dragger>
+            </div>
             {uploadingFiles.length > 0 && (
                 <div className="uploading-files">
                     <h3 className='heading'>{`Uploading - ${totalUploaded+1}/${uploadingFiles.length + totalUploaded} files`}</h3>
                     <List
                         dataSource={uploadingFiles}
-                        renderItem={item => (
+                        renderItem={file => (
                             <List.Item>
-                                {item}
+                                {file.name}
                                 <Progress percent={50} status="active" format={() => ''} />
-                                {/* {uploadingFiles.includes(item) && <Progress className='bar' percent={50} status="active" />} */}
                             </List.Item>
                         )}
                     />
@@ -79,11 +69,10 @@ const FileUpload = () => {
                     <h3>Uploaded</h3>
                     <List
                         dataSource={uploadedFiles}
-                        renderItem={item => (
+                        renderItem={file => (
                             <List.Item>
-                                <span>{item} <Button type="text" icon={<CheckCircleOutlined />} style={{ color: '#6FCF97' }}/></span>
-                                <Button type="text" icon={<DeleteOutlined />} onClick={() => handleDelete(item)} style={{ color: '#EB5757' }} />
-                                
+                                <span>{file.name} <Button type="text" icon={<CheckCircleOutlined />} style={{ color: '#6FCF97' }}/></span>
+                                <Button type="text" icon={<DeleteOutlined />} onClick={() => handleDelete(file.name)} style={{ color: '#EB5757' }} />
                             </List.Item>
                         )}
                     />

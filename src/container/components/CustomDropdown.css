@@ -8,7 +8,7 @@ border: 1 ;
 }
 
 .cust-dropdown .ant-dropdown .ant-dropdown-menu{
-    padding: 0px;
+    padding: 0px !important;
     /* padding: 2px 0px 2px 0px; */
 gap: 0px;
 border-radius: 8px 0px 0px 0px !important;
