@@ -44,10 +44,18 @@ const campaignData = [
     {
         id:6,
         status:{ color: '#27AE603D', textColor: '#219653', text: 'Live' },
-        heading:'Campaign Name 4',
+        heading:'Campaign Name 6',
         text:'Lorem ipsum dolor sit amet consectetur. Enim amet quisque turpis vitae sed venenatis vulputate enim.....',
         conversionRate:{ color: '#27AE60', value: '24', icon: logoup },
         date:'12th Feb, 2024',
+    },
+    {
+      id:7,
+      status:{ color: '#27AE603D', textColor: '#219653', text: 'Live' },
+      heading:'Holi Campaign',
+      text:'Lorem ipsum dolor sit amet consectetur. Enim amet quisque turpis vitae sed venenatis vulputate enim.....',
+      conversionRate:{ color: '#27AE60', value: '24', icon: logoup },
+      date:'12th Feb, 2024',
     },
     // Add more campaign objects as needed
   ];

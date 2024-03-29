@@ -39,6 +39,7 @@ const campaigns = campaignData;
 const Campaigns = () => {
     const [currentPage, setCurrentPage] = useState(1); // State for current page
     const [pageSize] = useState(5); // Number of items per page
+    const [searchTerm, setSearchTerm] = useState('');
   
     const handlePageChange = (page) => {
       setCurrentPage(page);
@@ -53,13 +54,7 @@ const Campaigns = () => {
       }
       console.log("Selected Box:", selectedBox); // Add this line to check selectedBox state
     };
-    // Calculate start and end index for current page
-    const startIndex = (currentPage - 1) * pageSize;
-    const endIndex = Math.min(startIndex + pageSize - 1, campaigns.length - 1);
-    // Get current page data
-    const currentPageData = campaigns.slice(startIndex, endIndex + 1);
-    const [isModalVisible, setIsModalVisible] = useState(false);
-    const [isAddNewCampaignModalVisible, setIsAddNewCampaignModalVisible] = useState(false);
+
 
     const handleEndCampaign = () => {
       setIsModalVisible(true);
@@ -73,7 +68,22 @@ const Campaigns = () => {
       navigate('/campaigns/new');
     };
 
-    
+    const handleSearchChange = (event) => {
+      setSearchTerm(event.target.value);
+    };
+   // Filter campaigns based on search term
+   const filteredCampaigns = campaignData.filter(campaign =>
+    campaign.heading.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+  // Calculate start and end index for current page
+   const startIndex = (currentPage - 1) * pageSize;
+  // const endIndex = Math.min(startIndex + pageSize - 1, campaigns.length - 1);
+  const endIndex = Math.min(startIndex + pageSize - 1, filteredCampaigns.length - 1);
+  // Get current page data
+  // const currentPageData = campaigns.slice(startIndex, endIndex + 1);
+  const currentPageData = filteredCampaigns.slice(startIndex, endIndex + 1);
+  const [isModalVisible, setIsModalVisible] = useState(false);
+
 
   
   
@@ -82,7 +92,7 @@ const Campaigns = () => {
             {/* <Content className="ant-layout"> */}
         <div className='submenu'>
           <div className="search-container">
-            <input type="text" className="form-control py-2" placeholder="Search by Campaign name" aria-label="Search by Campaign name" aria-describedby="basic-addon2"/>
+            <input type="text" className="form-control py-2" placeholder="Search by Campaign name" onChange={handleSearchChange} aria-label="Search by Campaign name" aria-describedby="basic-addon2"/>
             <img src={searchIcon} className="search-icon" alt="Search" />
           </div>
           <div className='right_options'>
