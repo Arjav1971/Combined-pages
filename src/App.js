@@ -1,7 +1,7 @@
 
 
 import './App.css';
-import {BrowserRouter as Router,Routes,Route} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // import Campaigns from './pages/Campaigns';
 import Campaigns from './pages/Campaigns';
@@ -17,36 +17,31 @@ import PropertyLocation from './pages/PropertyLocation';
 import PropertySize from './pages/PropertySize';
 import PropertyAttributes from './pages/PropertyAttributes';
 import NewProperty from './pages/NewPropery';
-import Step from '../src/container/components/steps'
 
 function App() {
   return (
-   <Router>
-    <Routes>
-
-      
-    <Route path="/login" element={<Login/>}/>
-    <Route path="/email" element={<Email/>}/>
-    <Route path="/otp" element={<Otp/>}/>
-    <Route path="/step" element={<Step/>}/>
-      <Route path="/" element={<Test/>}>
-         <Route path="dashboard" index element={<Dashboard/>}/>
-         <Route path="campaigns" element={<Campaigns/>}/>
-         <Route path="campaigns/new" element={<NewCampaign />} />
-         <Route path="inventory" element={<Inventory/>}/>
-         <Route path="inventory/new" element={<NewProperty/>}/>
-         <Route path="inventory/propertysize" element={< PropertySize/>}/>
-         <Route path="inventory/propertylocation" element={<PropertyLocation/>}/>
-         <Route path="inventory/propertyattribute" element={<PropertyAttributes/>}/>
-         
-      
-         
+    <Router>
+      <Routes>
+      <Route path="/" element={<Test />}>
+          <Route path="dashboard" index element={<Dashboard />} />
+          <Route path="campaigns" element={<Campaigns />} />
+          <Route path="campaigns/new" element={<NewCampaign />} />
+          <Route path="inventory" element={<Inventory />} />
+          <Route path="inventory/new" element={<NewProperty />} />
+          <Route path="inventory/propertysize" element={< PropertySize />} />
+          <Route path="inventory/propertylocation" element={<PropertyLocation />} />
+          <Route path="inventory/propertyattribute" element={<PropertyAttributes />} />
+        </Route>
 
 
+        <Route path="/">
+          <Route path="login" element={<Login />} />
+          <Route path="login/email" element={<Email/>}/>
+          <Route path="login/otp" element={<Otp/>} />
+        </Route>
 
-      </Route>
-    </Routes>
-   </Router>
+      </Routes>
+    </Router>
   );
 }
 

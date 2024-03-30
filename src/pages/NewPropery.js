@@ -6,7 +6,7 @@ import Stepper from '../container/components/Stepper'
 import FilterListIcon from '@mui/icons-material/FilterList';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import "./Property.css";
-
+ 
 const NewCampaign = () => {
     // const[flag , setFlag] = useState(true);
     const navigate = useNavigate();

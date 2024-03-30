@@ -4,11 +4,22 @@ import logo from '../assets/logo.svg'
 import '../container/style/login.css'
 import {Carousel}  from '../container/components/carousel'
 import slides from "../data/carouselData.json";
+import { useNavigate } from 'react-router-dom';
 
 
 
 const Login = () =>{
-    // console.log(slides)
+
+    const navigate = useNavigate();
+    const handleGoogle = () => {
+        // navigate('/inventory/propertylocation');
+    };
+    const handleEmail = () => {
+        navigate('/login/email');
+    };
+    const handleOtp = () => {
+        navigate('/login/otp');
+    };
     return (
         <div className="w-full h-screen flex flex-row-reverse items-start">
             <div className="relative w-1/2 h-full flex flex-col ">
@@ -21,13 +32,13 @@ const Login = () =>{
                         <h3 className='login font-Raleway'>Login</h3>
                         <p className=' text-[20px] font-normal text-[#686767] mb-10 font-Raleway'>See your growth and get management support. </p>
                     </div>
-                    <button className=' text-[16x] w-full text-[#3c3c3c]  font-Raleway my-2 bg-[#edededb9] border border-[#4b4b4b4d] font-semibold rounded-md p-3 text-center flex items-center justify-center cursor-pointer'>
+                     <button className=' text-[16x] w-full text-[#3c3c3c]  font-Raleway my-2 bg-[#edededb9] border border-[#4b4b4b4d] font-semibold rounded-md p-3 text-center flex items-center justify-center cursor-pointer'>
                         <img src={googleLogo} className='h-7 mr-2'/>    Continue with Google
                     </button>
-                    <button className=' text-[16x] w-full text-[#3c3c3c]   font-Raleway my-2 bg-[#edededb9] border border-[#4b4b4b4d] font-semibold rounded-md p-3 text-center flex items-center justify-center cursor-pointer'>
+                    <button onClick={handleEmail} className=' text-[16x] w-full text-[#3c3c3c]   font-Raleway my-2 bg-[#edededb9] border border-[#4b4b4b4d] font-semibold rounded-md p-3 text-center flex items-center justify-center cursor-pointer'>
                            Continue with Email
                     </button>
-                    <button className='text-[16x] w-full text-[#3c3c3c]  font-Raleway my-2 bg-[#edededb9] border border-[#4b4b4b4d] font-semibold rounded-md p-3 text-center flex items-center justify-center cursor-pointer'>
+                    <button onClick={handleOtp} className='text-[16x] w-full text-[#3c3c3c]  font-Raleway my-2 bg-[#edededb9] border border-[#4b4b4b4d] font-semibold rounded-md p-3 text-center flex items-center justify-center cursor-pointer'>
                            Continue with Mobile
                     </button>
 

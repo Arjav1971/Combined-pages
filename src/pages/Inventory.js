@@ -17,7 +17,7 @@ import FilterListIcon from '@mui/icons-material/FilterList';
 import DeleteIcon from '@mui/icons-material/Delete';
 import { v4 as uuid } from "uuid";
 import { nanoid } from 'nanoid'
-import EndCampaignModal from '../modal/EndCampaignModal';
+import Filters from '../modal/Filters';
 
 function StatusCell(props) {
   if (props.value === true) {
@@ -29,15 +29,15 @@ function StatusCell(props) {
 }
 
 export function SortedDescendingIcon() {
-  return <FilterListIcon className="icon" />;
+  return <FilterListIcon className="" />;
 }
 
 export function SortedAscendingIcon() {
-  return <FilterListIcon className="icon" />;
+  return <FilterListIcon className="" />;
 }
 
 export function UnsortedIcon() {
-  return <FilterListIcon className="icon" />;
+  return <FilterListIcon className="" />;
 
 }
 
@@ -175,7 +175,7 @@ const Campaigns = () => {
         <div className='right_options'>
         <div>
             <button className='apply_filter' onClick={handleEndCampaign}><span>All Filters</span><FilterListIcon style={{ width :"20px"}}/></button>
-            <EndCampaignModal visible={isModalVisible} onClose={handleCloseModal} />
+            <Filters visible={isModalVisible} onClose={handleCloseModal} />
           </div>
           <div>
             <button className='new_campaign' onClick={handleAddNewCampaign}>

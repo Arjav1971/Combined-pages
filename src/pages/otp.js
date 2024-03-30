@@ -4,10 +4,15 @@ import '../container/style/login.css'
 import {Carousel}  from '../container/components/carousel'
 import slides from "../data/carouselData.json";
 import { BsEyeSlash, BsEye } from "react-icons/bs";
-
+import { useNavigate } from 'react-router-dom';
 
 
 const Login = () => {
+
+    const navigate = useNavigate();
+    const handleLogin = () => {
+        navigate('/login');
+    };
 
     const [formData, setFormData] = useState({
         number: '',
@@ -27,7 +32,7 @@ const Login = () => {
     };
 
     return (
-
+ 
         <div className="w-full h-screen flex flex-row-reverse items-start">
             <div className="relative w-1/2 h-full flex flex-col ">
                 <Carousel data= {slides.slides}/>
@@ -63,7 +68,7 @@ const Login = () => {
                     <button className=' text-[16x] w-full text-[white]  font-Raleway my-2 mt-4 bg-[#9ea1c0] border border-[#4b4b4b4d] font-semibold rounded-md p-2 text-center flex items-center justify-center cursor-pointer'>
                         Login
                     </button>
-                    <button className='text-[16x] w-full text-[#3c3c3c]  font-Raleway my-2 bg-[#edededb9] border border-[#4b4b4b4d] font-semibold rounded-md p-2 text-center flex items-center justify-center cursor-pointer'>
+                    <button onClick={handleLogin} className='text-[16x] w-full text-[#3c3c3c]  font-Raleway my-2 bg-[#edededb9] border border-[#4b4b4b4d] font-semibold rounded-md p-2 text-center flex items-center justify-center cursor-pointer'>
                         Back to Login
                     </button>
 
