@@ -23,7 +23,7 @@ function App() {
     <Router>
       <Routes>
       <Route path="/" element={<Test />}>
-          <Route path="dashboard" index element={<Dashboard />} />
+          <Route path="dashboard"  element={<Dashboard />} />
           <Route path="campaigns" element={<Campaigns />} />
           <Route path="campaigns/new" element={<NewCampaign />} />
           <Route path="inventory" element={<Inventory />} />

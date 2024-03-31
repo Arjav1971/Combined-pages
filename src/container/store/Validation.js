@@ -17,7 +17,7 @@ export default function Validation(values) {
     }
     else if ( !password_pattern.test(values.password))
     {
-        errors.password = "Password didn't match"
+        errors.password = ""
     }
     return errors
 
