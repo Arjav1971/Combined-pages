@@ -18,6 +18,12 @@ background: #F8F8F8;
 border: 1px solid #E6E6E6
 }
 
+.cust-dropdown .ant-menu-light .ant-menu-item-selected {
+    background: #E6E6E6;
+
+}
+
+
 .all_campaigns:hover{
     background: #F8F8F8;
     border: 1px solid #E6E6E6;
