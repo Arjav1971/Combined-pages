@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Campaigns from './pages/Campaigns';
 import Inventory from './pages/Inventory';
 import MainLayout from './container/components/MainLayout';
-import Test from './container/components/Test';
+// import Test from './container/components/Test';
 import Dashboard from './pages/Dashboard';
 import Login from './pages/login'
 import Email from './pages/email'
@@ -22,7 +22,7 @@ function App() {
   return (
     <Router>
       <Routes>
-      <Route path="/" element={<Test />}>
+      <Route path="/" element={<MainLayout />}>
           <Route path="dashboard"  element={<Dashboard />} />
           <Route path="campaigns" element={<Campaigns />} />
           <Route path="campaigns/new" element={<NewCampaign />} />
