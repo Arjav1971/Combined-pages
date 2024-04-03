@@ -34,6 +34,7 @@ const Test = () => {
     const navigate = useNavigate();
     useEffect(() => {
         let username = sessionStorage.getItem('username');
+        let number = sessionStorage.getItem('number');
         if (username === '' || username === null) {
             navigate('/login');
         }
@@ -53,35 +54,6 @@ const Test = () => {
         })
 
     }, [])
-
-
-
-
-    
-    // const navigate = useNavigate();
-    // useEffect(() => {
-    //     let username = sessionStorage.getItem('username');
-    //     if (username === '' || username === null) {
-    //         navigate('/login');
-    //     }
-    //     let jwttoken = sessionStorage.getItem('jwttoken');
-    //     fetch("https://re-bot-backend-ba747145cd34.herokuapp.com/user/userData/", {
-    //         method: "POST",
-    //         headers: {
-    //             'Authorization': 'Bearer ' + jwttoken
-                
-    //         }
-    //     }).then((res) => {
-    //         return res.json();
-    //     }).then((response) => {
-    //         console.log(response);
-    //     }).catch((err) => {
-    //         console.log(err.message);
-    //     })
-
-    // }, [])
-
-
 
 
     const [collapsed, setCollapsed] = useState(false);

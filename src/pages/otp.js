@@ -80,7 +80,7 @@ const Login = () => {
                 }
             }).then((res) => {
                 console.log(res)
-                sessionStorage.setItem('username', res.number);
+                sessionStorage.setItem('number', res.number);
                 sessionStorage.setItem('jwttoken', res.access);
                 navigate('/');
                 // console.log(res);
