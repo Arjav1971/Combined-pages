@@ -353,6 +353,8 @@
 }
 
 
+
+
 /* Style the scrollbar */
 .new-cmpgn::-webkit-scrollbar {
     width: 10px; /* Width of the scrollbar */
@@ -379,11 +381,11 @@ background: #E6E6E6;
 
 /* Handle of the scrollbar */
 .new-cmpgn::-webkit-scrollbar-thumb {
-    background: #888; /* Color of the scrollbar handle */
+    background: #888 !important; /* Color of the scrollbar handle */
     border-radius: 5px; /* Rounded corners of the handle */
 }
 
 /* Handle of the scrollbar on hover */
 .new-cmpgn::-webkit-scrollbar-thumb:hover {
-    background: #555; /* Color of the scrollbar handle on hover */
+    background: #555 !important; /* Color of the scrollbar handle on hover */
 }
