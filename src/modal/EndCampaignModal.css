@@ -13,7 +13,7 @@
     /* top: 401px; */
     /* left: 480px; */
 /* } */
-.end-campaign-modal .ant-modal-content{
+.campaign-end-campaign-modal .ant-modal-content{
     position: relative;
     background-color: #ffffff;
     background-clip: padding-box;
@@ -27,13 +27,13 @@
     height: 222px;
 }
 
-.modal-block{
+.campaign-modal-block{
     display: flex;
     flex-direction: column;
     padding: 0px;
 }
 
-.modal-head{
+.campaign-modal-head{
     font-family: Raleway;
     font-size: 20px;
     font-weight: 600;
@@ -44,7 +44,7 @@
     margin-bottom:8px;
 
 }
-.modal-text{
+.campaign-modal-text{
     font-family: Raleway;
     font-size: 16px;
     font-weight: 400;
@@ -56,7 +56,7 @@
 
 }
 
-.cancel-btn{
+.campaign-cancel-btn{
     width: 101px;
     height: 40px;
     padding: 8px 24px 8px 24px;
@@ -78,14 +78,14 @@
 
 }
 
-.cancel-btn:hover{
+.campaign-cancel-btn:hover{
     background-color: #D4D4D4 !important; 
     color: #222222 !important; 
     border-color: #D4D4D4 !important; 
 
 }
 
-.end-btn{
+.campaign-end-btn{
     width: 111px;
     height: 40px;
     padding: 8px 24px 8px 24px;
@@ -103,7 +103,7 @@
 
 }
 /* Add hover styles for the .end-btn */
-.end-btn:hover {
+.campaign-end-btn:hover {
     background-color: #ff6b6b !important; /* Change background color on hover */
     color: #fff; /* Change text color on hover */
     border-color: #ff6b6b; /* Change border color on hover */
