@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import {
     MenuFoldOutlined,
     MenuUnfoldOutlined,
@@ -20,8 +20,7 @@ import logoCommunity from '../../assets/Framecommunity.svg';
 import logoDoc from "../../assets/FrameDocs.svg";
 import logoHelp from "../../assets/Framehelp.svg";
 import logoDropdown from "../../assets/Framedropdown.svg";
-import logoClose from "../../assets/Frame 1000001797right.svg";
-import logoOpen from "../../assets/Frame 1171275151open.svg";
+
 import logoDropdownUp from "../../assets/Framelogoup.svg";
 import blueTick from "../../assets/Frameblue-tick.svg";
 import logoplusCircle from "../../assets/Frame 1171275151circle-plus.svg";
