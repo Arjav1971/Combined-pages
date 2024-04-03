@@ -6,8 +6,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // import Campaigns from './pages/Campaigns';
 import Campaigns from './pages/Campaigns';
 import Inventory from './pages/Inventory';
-import MainLayout from './container/components/MainLayout';
-import Test from './container/components/Test';
+
+import Test from './container/components/MainLayout';
 import Dashboard from './pages/Dashboard';
 import Login from './pages/login'
 import Email from './pages/email'
