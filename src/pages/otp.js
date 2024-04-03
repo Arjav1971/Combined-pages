@@ -38,10 +38,7 @@ const Login = () => {
     console.log(formData.number)
     async function sendOtp(e) {
         e.preventDefault();
-        // setErrors(Validation(formData));
         let items = {phoneNumber : formData.number};
-        // console.log(formData.email)
-        // console.log(formData.password)
         fetch('https://re-bot-backend-ba747145cd34.herokuapp.com/user/login/sendOTP/', {
             method: "POST",
             headers: { 'content-type': 'application/json' },
@@ -60,13 +57,10 @@ const Login = () => {
     }
     async function handleSubmitUsingApi(e) {
         e.preventDefault();
-        // setErrors(Validation(formData));
         let items = {
             phoneNumber : formData.number,
             otp: formData.otp
         };
-        // console.log(formData.email)
-        // console.log(formData.password)
         fetch('https://re-bot-backend-ba747145cd34.herokuapp.com/user/login/verifyOTP/', {
             method: "POST",
             headers: { 'content-type': 'application/json' },
@@ -76,11 +70,15 @@ const Login = () => {
             .then((result) => {
                 console.log(result)
                 {
-                    return result.json();
+                    console.log(result)
+                    if( result.status === 200) 
+                    {
+                        return result.json();
+                    }
                 }
             }).then((res) => {
                 console.log(res)
-                sessionStorage.setItem('number', res.number);
+                sessionStorage.setItem('username', res.number);
                 sessionStorage.setItem('jwttoken', res.access);
                 navigate('/');
                 // console.log(res);
@@ -90,8 +88,6 @@ const Login = () => {
                 console.log(error)
             })
     }
-
-
     return (
 
         <div className="w-full h-screen flex flex-row-reverse items-start">
@@ -145,5 +141,4 @@ const Login = () => {
 
     )
 }
-
 export default Login
